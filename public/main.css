@@ -1,0 +1,63 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+#login{
+    background-color: rgba(0, 255, 126, 0.58);
+}
+.signup,.createAcc {
+    background-color: rgba(57, 117, 199, 0.51);
+}
+
+.inputField{
+    color: rgba(86, 107, 255, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+}
+p{
+    color: gray;
+}
+#formData{
+    margin: auto;
+    width: 60%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 2px;
+    padding: 40px 50px;
+}
+.inputregister{
+    width:600px;
+}
+.viewDatatbl{
+    border-style: dashed;
+    border-color: rgba(225, 102, 65, 0.86);
+    line-height: 30px;
+    margin-top: 70px;
+}
+
+.Registration{
+    font-size: 25px;
+    font-weight: 800;
+    color: #3FADEA;
+}
+
+.fileimage{
+    margin-top: 30px;
+
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

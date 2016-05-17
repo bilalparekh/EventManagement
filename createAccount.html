@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="public/main.css">
+     <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body ng-app="sampleApp">
+    <div ng-controller="feeCtrl">
+        <!--<md-input-container class="md-block">-->
+            <!--<label>Description</label>-->
+            <!--<input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">-->
+        <!--</md-input-container>-->
+        <h1 class="md-display-1" style="text-align: center">Create Account</h1>
+
+        <!--= Login-->
+        <md-input-container class="md-block">
+            <label>Email</label>
+            <input type="email" required name="createEmail" ng-model="createEmail">
+            <div ng-messages="projectForm.clientName.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" required name="createPassword" ng-model="createPassword">
+            <div ng-messages="projectForm.clientName.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+
+    <!--<input type="email" ng-model="createEmail">
+    <input type="password" ng-model="createPassword">-->
+        <md-button class="btn1 createAcc" ng-click="create()"> Create Account </md-button>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life Easy Task Manager</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="public/main.css">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body ng-app="sampleApp">
+
+<div ng-controller="feeCtrl">
+    <!--= Parent portion-->
+
+    <md-button class="md-raised md-warn md-button md-ink-ripple">User Name : {{showUserName}}
+    </md-button>
+    <md-button ng-click="logOut()" style="float: right" class="add-tab md-primary md-raised">Log Out</md-button>
+
+    <div id="info">
+        <h2 class="md-display-2">
+            Your Own Task Manager
+        </h2>
+        <p class="md-display-1">
+            Join to manage tasks,
+            and make life easier with Life Easy Task Manager.
+        </p>
+        <p class="md-display-1">
+            Manage Everything
+
+            Organize your work projects, household lists, and grocery shopping. With a simple interface, it is super easy to manage your tasks.
+        </p>
+    </div>
+    <footer>
+        <md-button ng-click="addTask()"  class="add-tab md-primary md-raised" style="margin: auto;width: 100%;margin-top: 2%">ADD TASK</md-button>
+        <md-button ng-click="viewTask()" class="add-tab md-primary md-raised" style="margin: auto;width: 100%;margin-top: 2%">View TASK</md-button>
+    </footer>
+
+
+
+
+
+    <div ng-repeat="a in storeData">
+        {{a.ParentData.firstName}}<br>
+        {{a.ParentData.secondName}}<br>
+        {{a.ParentData.Age}}<br>
+        {{a.ChildData.firstName}}<br>
+        {{a.ChildData.secondName}}<br>
+        {{a.ChildData.Age}}<br>
+
+    </div>
+</div>
+
+
+</body>
+</html>
